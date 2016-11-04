@@ -5,11 +5,10 @@ defmodule Filesize.Mixfile do
     [app: :filesize,
      version: "0.1.0",
      elixir: "~> 1.3",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     maintainers: ["Mario Behrendt"],
-     description: "Very small module to turn a bytes value into a human readable format.",
-     deps: deps()]
+     description: description(),
+     package: package(),
+     deps: deps()
+   ]
   end
 
   # Configuration for the OTP application
@@ -19,15 +18,22 @@ defmodule Filesize.Mixfile do
     [applications: [:logger]]
   end
 
-  # Dependencies can be Hex packages:
-  #
-  #   {:mydep, "~> 0.3.0"}
-  #
-  # Or git/path repositories:
-  #
-  #   {:mydep, git: "https://github.com/elixir-lang/mydep.git", tag: "0.1.0"}
-  #
-  # Type "mix help deps" for more examples and options
+  def description() do
+    """
+    Very small module to turn a bytes value into a human readable format."
+    """
+  end
+
+  def package() do
+    [
+      maintainers: ["Mario Behrendt"],
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => "https://github.com/slickcoach/filesize"
+      }
+   ]
+  end
+
   defp deps do
     []
   end
