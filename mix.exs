@@ -20,7 +20,7 @@ defmodule Filesize.Mixfile do
 
   def description() do
     """
-    Very small module to turn a bytes value into a human readable format."
+    Very small module to turn a bytes value into a human readable format
     """
   end
 
@@ -35,6 +35,8 @@ defmodule Filesize.Mixfile do
   end
 
   defp deps do
-    []
+    [
+      {:ex_doc, "~> 0.14", only: :dev}
+    ]
   end
 end
