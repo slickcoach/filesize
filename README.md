@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/slickcoach/filesize.svg?branch=master)](https://travis-ci.org/slickcoach/filesize) [![HEX version](https://img.shields.io/hexpm/v/filesize.svg)](https://hex.pm/packages/filesize) [![HEX downloads](https://img.shields.io/hexpm/dw/filesize.svg)](https://hex.pm/packages/filesize)
+
+
 # Filesize
 
 Very small module to turn a bytes value into a human readable format.
